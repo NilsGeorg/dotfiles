@@ -1,0 +1,71 @@
+{
+    "custom/media": {
+        "format": "{icon}   {0}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "firefox": "",
+            "default": "🎜"
+        },
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous",
+        "escape": true,
+        "exec": "~/.config/waybar/mediaplayer.py" // Script in resources folder
+    },
+    "custom/rofi": {
+        "format": "",
+        "tooltip-format": "App Menu",
+        "on-click": "rofi -show combi -modi drun,window,run,combi -combi-modi drun,window,run -theme rounded_nord"
+    },
+    "custom/firefox": {
+        "format": "",
+        "tooltip-format": "Firefox",
+        "on-click": "firefox"
+    },
+    "custom/thunar": {
+        "format": " ",
+        "tooltip-format": "File Manager",
+        "on-click": "thunar"
+    },
+    "custom/screenshot": {
+        "format": "",
+        "on-click": "~/.config/hypr/scripts/screenshot_full",
+        "on-click-right": "~/.config/hypr/scripts/screenshot_area"
+    },
+    "custom/storage": {
+        "format": " {}",
+        "format-alt": "{percentage}% ",
+        "format-alt-click": "click-right",
+        "return-type": "json",
+        "interval": 60,
+        "exec": "~/.config/waybar/modules/storage.sh"
+    },
+    "custom/pacman": {
+        "format": "  {}",
+        "tooltip-format":"{} Updates",
+        "interval": 3600, // every hour
+        "exec": "checkupdates | wc -l", // # of updates
+        "exec-if": "exit 0", // always run; consider advanced run conditions
+        "on-click": "alacritty -e 'paru'; pkill -SIGRTMIN+o8 waybar", // update system
+        "signal": 8,
+        "max-length": 5,
+        "min-length": 3
+    },
+    "custom/power": {
+        "format": "<big></big>",
+        "tooltip": false,
+        "on-click": "wlogout"
+    },
+    "custom/weather": {
+        "format": "{}",
+        "interval": 3600,
+        "exec": "curl -s 'https://wttr.in/Bochum?format=1'",
+        "exec-if": "ping wttr.in -c1"
+    },
+    "custom/systemgroup": {
+        "format": "",
+        "tooltip": false
+    }
+}

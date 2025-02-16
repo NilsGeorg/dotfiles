@@ -1,0 +1,22 @@
+{
+    "hyprland/workspaces": {
+        "all-outputs": true,
+        "format": "{name}",
+        "on-scroll-up": "hyprctl dispatch workspace e+1 1>/dev/null",
+        "on-scroll-down": "hyprctl dispatch workspace e-1 1>/dev/null",
+        "sort-by-number": true,
+        "active-only": false
+    },
+    "hyprland/window": {
+        "max-length": 100,
+        "separate-outputs": true,
+        "format": "{}",
+        "tooltip-format": "{class}",
+        "rewrite": {
+            "(.*) — Mozilla Firefox": "  $1",
+            "(.*) - fish": " @ $1",
+            "(.*) - Code - OSS":"  $1",
+            "(.*) - Thunar":"   $1"
+        }
+    }
+}

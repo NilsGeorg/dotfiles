@@ -1,0 +1,173 @@
+{
+    // Globals -------------------------------------------------------------------------
+    "layer": "top",
+    "position": "top",
+    "margin-left": 10,
+    "margin-bottom": 0,
+    "margin-right": 10,
+    "spacing": 5, // Gaps between modules (4px)
+    // Include files -------------------------------------------------------------------------
+    "include": [
+        "~/.config/waybar/modules/custom.jsonc",
+        "~/.config/waybar/modules/hyprland.jsonc"
+    ],
+    // Waybar Modules -------------------------------------------------------------------------
+    "modules-left": [
+        "group/icons",
+        "tray",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "group/system",
+        "network",
+        "group/media",
+        "group/environment",
+        "custom/power"
+    ],
+    // Groups -------------------------------------------------------------------------
+    "group/icons": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/rofi",
+            "custom/firefox",
+            "custom/thunar",
+            "custom/screenshot"
+        ]
+    },
+    "group/system": {
+        "orientation": "inherit",
+        "modules": [
+            "custom/systemgroup",
+            "custom/pacman",
+            "cpu",
+            "backlight",
+            "battery",
+            "temperature",
+            "custom/storage",
+            "memory"
+        ],
+        "drawer": {}
+    },
+    "group/media": {
+        "modules": [
+            "custom/media",
+            "wireplumber"
+        ]
+    },
+    "group/environment": {
+        "modules":[
+            "clock",
+            "custom/weather"
+        ]
+    },
+    // Modules -------------------------------------------------------------------------    
+    "clock": {
+        "format": "  {:%H:%M  %e %b}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "today-format": "<b>{}</b>"
+    },
+    "temperature": {
+        // "thermal-zone": 1,
+        "interval": 4,
+        "critical-threshold": 80,
+        "format-critical": "  {temperatureC}°C",
+        "format": "{icon}  {temperatureC}°C",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
+        "max-length": 7,
+        "min-length": 7,
+        "on-click": "xsensors"
+    },
+    "memory": {
+        "interval": 30,
+        "format": "  {used:0.2f} / {total:0.0f} GB",
+        "on-click": "alacritty -e btop"
+    },
+    "battery": {
+        "interval": 2,
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "network": {
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": "",
+        "format-linked": "",
+        "format": "",
+        "format-disconnected": "",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "on-click": "wl-copy $(ip address show up scope global | grep inet | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c5-)",
+        "on-click-right": "wl-copy $(ip address show up scope global | grep inet6 | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c6-)",
+        "tooltip-format": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
+        "tooltip-format-wifi": " {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n {bandwidthUpBits}  {bandwidthDownBits}",
+        "interval": 10
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-alt": "{percent}% {icon}",
+        "format-alt-click": "click-right",
+        //"format-icons": ["", ""],
+        "format-icons": [
+            "",
+            ""
+        ],
+        "on-scroll-down": "brightnessctl s 5%-",
+        "on-scroll-up": "brightnessctl s +5%"
+    },
+    "cpu": {
+        "interval": 1,
+        //"format": " {}%", // Icon: microchip
+        "format": "{max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
+        "max-length": 13,
+        "min-length": 13
+    },
+    "wireplumber": {
+        "on-click": "pavucontrol",
+        "on-click-right": "amixer sset Master toggle 1>/dev/null",
+        //on-click: "${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle";
+        //on-scroll-down: "${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 0.04+";
+        //on-scroll-up: "${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 0.04-";
+        "format": "<span foreground='#fab387'>{icon}</span>  {volume}%",
+        "format-muted": " ",
+        "format-source": "",
+        "format-source-muted": "",
+        //"format-muted": "<span foreground='#fab387'> </span>",
+        //"format-icons": [ "<span foreground='#fab387'></span>" ]
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [
+                " ",
+                " ",
+                " "
+            ]
+        }
+    },
+    "tray": {
+        "icon-size": 15,
+        "spacing": 5
+    }
+}
