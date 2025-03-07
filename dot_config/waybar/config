@@ -23,6 +23,7 @@
     "modules-right": [
         "group/system",
         "battery",
+        "bluetooth",
         "network",
         "group/media",
         "group/environment",
