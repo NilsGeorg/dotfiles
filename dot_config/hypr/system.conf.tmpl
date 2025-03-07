@@ -12,11 +12,18 @@ exec-once = steam -silent
 {{ else if eq .system_id "home_work" }}
 
 # monitors
-exec-once = kanshi # Replace with open/close lid detection
+monitor = LG Electronics LG HDR 4K 0x00060F37, 3840x2160@60, 0x0, 1.50
+monitor = LG Electronics LG Ultra HD 0x0000C49F, 3840x2160@30, 2560x0, 1.50
 source = ./config/workspaces.conf
 
+# notebook lid
+bindl = , switch:off:Lid Switch, exec, hyprctl keyword monitor "eDP-1, 1920x1200, -1200x0, 1"
+bindl = , switch:on:Lid Switch, exec, hyprctl keyword monitor "eDP-1, disable"
+
 # autostart
-exec-once = [workspace 3] firefox
+exec-once = [workspace 1] idea
 exec-once = [workspace 2] teams-for-linux
+exec-once = [workspace 2] spotify
+exec-once = [workspace 3] firefox
 
 {{ end }}
