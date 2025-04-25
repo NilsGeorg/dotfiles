@@ -1,21 +1,43 @@
-dbgate-bin
-cameractrls
-chromium
-docker
-docker-compose
-firefox
-firefox-profile-switcher-connector-bin
-jdk-openjdk
-kanshi
-lazydocker
-lazygit
+# hypr
+hyprland
+hyprpicker
+qt5-wayland
+swayidle
 network-manager-applet
 rofi-wayland
-spotify
-teams-for-linux
-thunar
-usql
-udiskie
 
-teamspeak
+# Deps
+blueberry
+cachyos-extra-v3/chezmoi
+cameractrls
+chromium
+firefox
+thunar
+spotify
+udiskie
+usql
+lazygit
+lazydocker
+dbgate
+docker
+docker-compose
+imv
+mpv
+okular
+chezmoi
+cliphist
+cups
+cups-browsed
+calc
+xarchiver
+
+# AUR
+firefox-profile-switcher-connector-bin
+
+# work
+teams-for-linux
+
+# private
+telegram-desktop
 steam
+teamspeak3
