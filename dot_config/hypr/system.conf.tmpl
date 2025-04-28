@@ -13,13 +13,14 @@ $lid_script_path = ~/.config/hypr/scripts/lid_state
 bindl = , switch:Lid Switch, exec, $lid_script_path
 
 # monitors
+monitor = DP-1, 5120x1440@59.98, 0x0, 1
 monitor = , preferred, auto-right, 1
 
 # autostart
 exec-once = [workspace 1] ideas
 exec-once = [workspace 2] teams-for-linux
 exec-once = [workspace 2] spotify
-exec-once = [workspace 3] firefox
+exec-once = [workspace 1] firefox
 exec = $lid_script_path
 
 {{ end }}
