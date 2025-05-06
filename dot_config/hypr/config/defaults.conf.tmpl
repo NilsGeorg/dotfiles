@@ -3,5 +3,5 @@ $filemanager = thunar
 $applauncher = rofi -show combi -modi drun,window,run,combi -combi-modi drun,window,run -theme rounded_nord
 $terminal = alacritty
 $capture = grim -g "$(slurp)" - | swappy -f -
-$wallpaper = ~/.config/hypr/wallpaper.jpg
+$wallpaper = {{ default "~/.config/hypr/wallpaper.jpg" .wallpaper }}
 $idelTimeout = 1800
