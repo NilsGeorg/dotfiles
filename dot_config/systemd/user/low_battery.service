@@ -1,0 +1,12 @@
+[Unit]
+Description=Low battery notifier
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/low_battery.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
