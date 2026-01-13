@@ -16,11 +16,11 @@
     "custom/screenrecording-indicator"
   ],
   "modules-right": [
-    "clock",
     "bluetooth",
     "network",
     "pulseaudio",
     "cpu",
+    "clock",
     "battery"
   ],
   "hyprland/workspaces": {
@@ -188,6 +188,6 @@
     "max-length": 100,
     "separate-outputs": true,
     "format": "{}",
-    "tooltip-format": "{class}",
+    "tooltip-format": "{class}"
   }
 }
