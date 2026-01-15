@@ -1,0 +1,34 @@
+{{ if eq .system_id "home_desk" }}
+# monitors
+env = GDK_SCALE,1
+monitor = DP-1, 5120x1440@165, 0x0, 1
+monitor = HDMI-A-1, disable
+
+# auto start
+exec-once = uwsm-app -- telegram-desktop -startintray
+exec-once = uwsm-app -- zen-browser
+exec-once = uwsm-app -- steam -minimize
+
+{{ else if eq .system_id "home_work" }}
+
+env = GDK_SCALE,1
+monitor = DP-1, 5120x1440@59.98, 0x0, 1
+
+# autostart
+exec-once = [workspace 1] omarchy-launch-webapp $webapp_email
+exec-once = [workspace 1] omarchy-launch-webapp $webapp_calendar
+exec-once = [workspace 1] omarchy-launch-webapp $webapp_music
+exec-once = [workspace 2] uwsm-app -- teams-for-linux
+exec-once = [workspace 2] uwsm-app -- zen-browser
+exec-once = [workspace 3] uwsm-app -- idea
+exec-once = uwsm-app -- 1password --minimize
+exec-once = uwsm-app -- jetbrains-toolbox --minimize
+
+# notebook lid
+$lid_script_path = ~/.config/hypr/lid_state
+bindl = , switch:Lid Switch, exec, $lid_script_path
+exec = $lid_script_path
+
+{{ end }}
+
+monitor = , preferred, auto-right, auto

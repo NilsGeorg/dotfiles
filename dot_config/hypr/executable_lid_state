@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+LID_STATE=$(grep . /proc/acpi/button/lid/*/state | awk '{print $2}')
+
+echo $LID_STATE
+if [ "$LID_STATE" = "open" ]; then
+    hyprctl keyword monitor "eDP-1, 1920x1200, -1200x0, 1"
+    echo "OPEN" >> /tmp/lid.txt
+else
+    hyprctl keyword monitor "eDP-1, disable"
+    echo "CLOSED" >> /tmp/lid.txt
+fi
