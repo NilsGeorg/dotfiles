@@ -1,12 +1,11 @@
 {{ if eq .system_id "home_desk" }}
 # monitors
 env = GDK_SCALE,1
-monitor = DP-1, 5120x1440@165, 0x0, 1
-monitor = HDMI-A-1, disable
+monitor = DP-1, 5120x1440@165, auto, 1
 
 # auto start
-exec-once = uwsm-app -- telegram-desktop -startintray
-exec-once = uwsm-app -- zen-browser
+exec-once = uwsm-app -- Telegram --minimize
+exec-once = uwsm-app -- librewolf
 exec-once = uwsm-app -- steam --minimize
 
 {{ else if eq .system_id "home_work" }}
