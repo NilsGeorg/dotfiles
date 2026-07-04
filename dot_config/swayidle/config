@@ -1,0 +1,1 @@
+timeout 60 ~/.config/swayidle/launch-screensaver.sh

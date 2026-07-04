@@ -1,0 +1,6 @@
+#!/bin/bash
+# sddm-autologin hash: {{ include ".chezmoitemplates/sddm-autologin.conf" | sha256sum }}
+sudo mkdir -p /etc/sddm.conf.d
+sudo tee /etc/sddm.conf.d/autologin.conf > /dev/null << 'INNER'
+{{ include ".chezmoitemplates/sddm-autologin.conf" }}
+INNER

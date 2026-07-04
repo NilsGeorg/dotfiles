@@ -1,0 +1,36 @@
+# install
+wlr-randr
+librewolf
+steam
+vscodium
+xpad
+chezmoi
+
+docker
+docker-compose
+okular
+calc
+xarchiver
+telegram-desktop
+teamspeak3
+lazygit
+lazydocker
+chromium
+go
+bitwarden
+bitwarden-cli
+npm
+pnpm
+python-pip
+python-pipx
+swayidle
+foot
+
+# install with pipx
+terminaltexteffects
+
+# install with go
+# usql - github.com/xo/usql@latest
+
+# uninstall 
+# firefox

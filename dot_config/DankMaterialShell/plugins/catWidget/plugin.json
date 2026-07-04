@@ -1,0 +1,12 @@
+{
+  "id": "catWidget",
+  "name": "Cat Widget",
+  "description": "An animated cat that walks in the DankBar. Walking speed reflects CPU load - the busier your system, the faster the cat runs! Based on CatWalk by Driglu4it.",
+  "version": "1.0.0",
+  "author": "kemo",
+  "icon": "pets",
+  "capabilities": ["dankbar-widget"],
+  "component": "./CatWidget.qml",
+  "settings": "./CatWidgetSettings.qml",
+  "permissions": ["settings_read", "settings_write", "process"]
+}
