@@ -1,5 +1,5 @@
 #!/bin/bash
-EFFECTS=(matrix rain decrypt beams blackhole burn slide)
+EFFECTS=(beams binarypath blackhole bubbles burn colorshift decrypt highlight laseretch matrix orbittingvolley pour print rain randomsequence smoke spotlights sweep synthgrid thunderstorm vhstape waves slide)
 
 while true; do
     EFFECT=${EFFECTS[$RANDOM % ${#EFFECTS[@]}]}
