@@ -4,6 +4,9 @@
   },
   "bongoCat": {
     "enabled": true,
-    "showMetrics": true
+    "showMetrics": true,
+    "catSizePercent": 100,
+    "catColorMode": "primary",
+    "pawHoldTime": 0
   }
 }

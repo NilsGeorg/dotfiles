@@ -18,7 +18,6 @@ packages:
     - pnpm
     - python-pip
     - python-pipx
-    - razergenie
     - swayidle
     - usage
     - vscodium
@@ -26,6 +25,7 @@ packages:
     - xarchiver
   aur: 
     - deezer
+    - razergenie
   go:
     - github.com/xo/usql@latest
   pipx:
