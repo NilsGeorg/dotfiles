@@ -1,5 +1,9 @@
 {
   "catWidget": {
     "enabled": true
+  },
+  "bongoCat": {
+    "enabled": true,
+    "showMetrics": true
   }
 }

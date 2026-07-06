@@ -25,6 +25,7 @@ python-pip
 python-pipx
 swayidle
 foot
+libinput-tools
 
 # install with pipx
 terminaltexteffects

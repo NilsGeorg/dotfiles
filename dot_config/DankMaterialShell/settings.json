@@ -414,9 +414,17 @@
         {
           "id": "systemTray",
           "enabled": true
+        },
+        {
+          "id": "catWidget",
+          "enabled": true
         }
       ],
       "centerWidgets": [
+        {
+          "id": "bongoCat",
+          "enabled": true
+        },
         {
           "id": "music",
           "enabled": true
@@ -431,10 +439,6 @@
         },
         {
           "id": "weather",
-          "enabled": true
-        },
-        {
-          "id": "catWidget",
           "enabled": true
         }
       ],
