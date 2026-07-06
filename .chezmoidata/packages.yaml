@@ -1,5 +1,6 @@
 packages:
   repo:
+    - betterbird
     - calc
     - cameractrls
     - chromium
