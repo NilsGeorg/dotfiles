@@ -1,0 +1,32 @@
+packages:
+  repo:
+    - calc
+    - cameractrls
+    - chromium
+    - docker
+    - docker-compose
+    - foot
+    - go
+    - lazydocker
+    - lazygit
+    - libinput-tools
+    - librewolf
+    - mise
+    - npm
+    - okular
+    - openrazer-daemon
+    - pnpm
+    - python-pip
+    - python-pipx
+    - razergenie
+    - swayidle
+    - usage
+    - vscodium
+    - wlr-randr
+    - xarchiver
+  aur: 
+    - deezer
+  go:
+    - github.com/xo/usql@latest
+  pipx:
+    - terminaltexteffects

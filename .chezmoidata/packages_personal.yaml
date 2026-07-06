@@ -1,0 +1,10 @@
+packages_personal:
+  repo:
+    - bitwarden
+    - bitwarden-cli
+    - steam
+    - teamspeak3
+    - telegram-desktop
+  aur: []
+  go: []
+  pipx: []

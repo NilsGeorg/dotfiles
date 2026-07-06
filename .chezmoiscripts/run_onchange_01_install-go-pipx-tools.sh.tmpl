@@ -1,0 +1,26 @@
+#!/bin/bash
+# Hash: {{ .packages | toJson | sha256sum }}-{{ .packages_work | toJson | sha256sum }}-{{ .packages_personal | toJson | sha256sum }}
+
+set -eufo pipefail
+
+{{ $extra := .packages_personal -}}
+{{ if eq .machine_type "work" -}}
+{{ $extra = .packages_work -}}
+{{ end -}}
+
+{{ $goTools := concat .packages.go $extra.go -}}
+{{ $pipxTools := concat .packages.pipx $extra.pipx -}}
+
+{{ if $goTools }}
+echo "Installing Go tools..."
+{{ range $goTools }}
+go install {{ . }}
+{{ end }}
+{{ end }}
+
+{{ if $pipxTools }}
+echo "Installing pipx tools..."
+{{ range $pipxTools }}
+pipx install {{ . }}
+{{ end }}
+{{ end }}

@@ -3,9 +3,6 @@
 # settings
 xdg-settings set default-web-browser librewolf.desktop
 
-git config --global user.name
-git config --global user.name "Nils Georg"
-
 shelly remove firefox
 
 # pipx

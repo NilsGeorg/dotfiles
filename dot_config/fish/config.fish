@@ -1,10 +1,7 @@
 source /usr/share/cachyos-fish-config/cachyos-config.fish
 
-# overwrite greeting
-# potentially disabling fastfetch
-#function fish_greeting
-#    # smth smth
-#end
+set -gx GOPATH "$HOME/go"
+fish_add_path $GOPATH/bin
+fish_add_path $HOME/.local/bin
 
-fish_add_path $HOME/go/bin
 alias code=vscodium

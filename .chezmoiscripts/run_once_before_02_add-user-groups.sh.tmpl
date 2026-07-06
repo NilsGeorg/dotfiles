@@ -1,0 +1,9 @@
+#!/bin/bash
+set -eufo pipefail
+
+{{ range .system.groups }}
+echo "Adding {{ $.chezmoi.username }} to group {{ . }}..."
+sudo usermod -aG {{ . }} {{ $.chezmoi.username }}
+{{ end }}
+
+echo "Group changes applied. Log out and back in for them to take effect."

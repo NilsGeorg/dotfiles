@@ -1,0 +1,18 @@
+vscodium_extensions:
+  - asciidoctor.asciidoctor-vscode
+  - bradlc.vscode-tailwindcss
+  - dbaeumer.vscode-eslint
+  - esbenp.prettier-vscode
+  - golang.go
+  - hashicorp.terraform
+  - mechatroner.rainbow-csv
+  - ms-azuretools.vscode-containers
+  - ms-azuretools.vscode-docker
+  - ms-python.debugpy
+  - ms-python.python
+  - ms-python.vscode-python-envs
+  - pkief.material-icon-theme
+  - redhat.vscode-yaml
+  - vue.volar
+  - yzane.markdown-pdf
+  - yzhang.markdown-all-in-one

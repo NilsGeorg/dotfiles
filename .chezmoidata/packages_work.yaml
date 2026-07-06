@@ -1,0 +1,9 @@
+packages_work:
+  repo:
+    - 1password
+    - 1password-cli
+    - kubectl
+    - teams-for-linux
+  aur: []
+  go: []
+  pipx: []

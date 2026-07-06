@@ -1,0 +1,24 @@
+#!/bin/bash
+# Packages hash: {{ .packages | toJson | sha256sum }}-{{ .packages_work | toJson | sha256sum }}-{{ .packages_personal | toJson | sha256sum }}
+
+set -eufo pipefail
+
+{{ $extra := .packages_personal -}}
+{{ if eq .machine_type "work" -}}
+{{ $extra = .packages_work -}}
+{{ end -}}
+
+{{ $repo := concat .packages.repo $extra.repo -}}
+{{ $aur := concat .packages.aur $extra.aur -}}
+
+echo "Installing repo packages via Shelly..."
+shelly install --no-confirm \
+{{ range $repo }}  {{ . }} \
+{{ end }}
+
+{{ if $aur }}
+echo "Installing AUR packages via Shelly..."
+shelly aur install --no-confirm \
+{{ range $aur }}  {{ . }} \
+{{ end }}
+{{ end }}

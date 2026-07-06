@@ -1,0 +1,5 @@
+system:
+  groups:
+    - docker
+    - input
+    - openrazer
