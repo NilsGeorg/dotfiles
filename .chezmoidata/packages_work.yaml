@@ -2,8 +2,12 @@ packages_work:
   repo:
     - 1password
     - 1password-cli
+    - claude-code
     - kubectl
     - teams-for-linux
-  aur: []
-  go: []
+    - github-cli
+  aur: 
+    - jetbrains-toolbox
+  go: 
+    - github.com/ionos-cloud/ionosctl/v6@latest
   pipx: []

@@ -127,3 +127,14 @@ bind = CTRL+ALT, Right, resizewin, +50, +0
 mousebind = SUPER, btn_left, moveresize,curmove
 #mousebind = NONE, btn_middle, togglemaximizescreen, 0
 mousebind = SUPER, btn_right, moveresize, curresize
+
+{{ if eq .machine_type "work" -}}
+# unbind = ,switch:on:Lid Switch
+# unbind = ,switch:off:Lid Switch
+# unbind = ,switch:Lid Switch
+# $lid_script_path = ~/.config/hypr/lid_state
+# bindl = , switch:Lid Switch, exec, $lid_script_path
+# exec = $lid_script_path
+
+
+{{ end -}}

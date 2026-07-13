@@ -1,0 +1,26 @@
+# autostart your favorite applications here
+
+# default
+# required for dms as systemd service
+exec-once = dbus-update-activation-environment --systemd --all
+exec-once = systemctl --user start mango-session.target
+
+exec-once = /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec-once = /usr/lib/xdg-desktop-portal-wlr &
+
+exec-once = wl-clip-persist --clipboard regular --reconnect-tries 0 &
+exec-once = wl-paste --type text --watch cliphist store  &
+
+exec-once = swayidle -w &
+
+
+{{ if eq .machine_type "personal" -}}
+exec-once = steam -silent &
+exec-once = deezer-desktop --start-in-tray &
+exec-once = bitwarden &
+
+{{ else if eq .machine_type "work" -}}
+exec-once = jetbrains-toolbox --minimize &
+exec-once = 1password --minimize &
+exec-once = teams-for-linux &
+{{ end -}}

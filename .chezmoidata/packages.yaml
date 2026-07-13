@@ -5,8 +5,10 @@ packages:
     - cameractrls
     - chromium
     - docker
+    - docker-buildx
     - docker-compose
     - foot
+    - filezilla
     - go
     - lazydocker
     - lazygit
@@ -24,6 +26,14 @@ packages:
     - vscodium
     - wlr-randr
     - xarchiver
+    - gnome-calculator
+    - gnome-disk-utility
+    - unzip
+    - pipewire 
+    - pipewire-pulse
+    - xdg-desktop-portal-wlr
+    - xdg-desktop-portal
+    - xdg-desktop-portal-gtk
   aur: 
     - deezer
     - razergenie
