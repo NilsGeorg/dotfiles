@@ -1,5 +1,7 @@
 packages:
   repo:
+    - asciidoctor 
+    - asciidoctor-pdf
     - betterbird
     - calc
     - cameractrls
@@ -7,8 +9,10 @@ packages:
     - docker
     - docker-buildx
     - docker-compose
-    - foot
     - filezilla
+    - foot
+    - gnome-calculator
+    - gnome-disk-utility
     - go
     - lazydocker
     - lazygit
@@ -18,22 +22,21 @@ packages:
     - npm
     - okular
     - openrazer-daemon
+    - pipewire 
+    - pipewire-pulse
     - pnpm
     - python-pip
     - python-pipx
     - swayidle
+    - unzip
     - usage
+    - vlc
     - vscodium
     - wlr-randr
     - xarchiver
-    - gnome-calculator
-    - gnome-disk-utility
-    - unzip
-    - pipewire 
-    - pipewire-pulse
-    - xdg-desktop-portal-wlr
     - xdg-desktop-portal
     - xdg-desktop-portal-gtk
+    - xdg-desktop-portal-wlr
   aur: 
     - deezer
     - razergenie
