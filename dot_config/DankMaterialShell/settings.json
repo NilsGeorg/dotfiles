@@ -167,7 +167,7 @@
   "groupActiveWorkspaceApps": false,
   "workspaceFollowFocus": false,
   "showOccupiedWorkspacesOnly": false,
-  "reverseScrolling": false,
+  "reverseScrolling": true,
   "dwlShowAllTags": false,
   "workspaceActiveAppHighlightEnabled": false,
   "workspaceColorMode": "default",
@@ -300,7 +300,7 @@
   "iconThemeDark": "System Default",
   "iconThemeLight": "System Default",
   "iconThemePerMode": false,
-  "lastAppliedIconTheme": "",
+  "lastAppliedIconTheme": "Adwaita",
   "cursorSettings": {
     "theme": "Adwaita",
     "size": 24,
@@ -565,13 +565,8 @@
           "enabled": true
         },
         "workspaceSwitcher",
-        "focusedWindow",
         {
           "id": "systemTray",
-          "enabled": true
-        },
-        {
-          "id": "catWidget",
           "enabled": true
         }
       ],
@@ -584,38 +579,19 @@
           "id": "music",
           "enabled": true
         },
+        "focusedWindow",
         {
-          "id": "systemUpdate",
-          "enabled": true
-        },
-        {
-          "id": "clock",
-          "enabled": true
-        },
-        {
-          "id": "weather",
+          "id": "catWidget",
           "enabled": true
         }
       ],
       "rightWidgets": [
         {
+          "id": "systemUpdate",
+          "enabled": true
+        },
+        {
           "id": "clipboard",
-          "enabled": true
-        },
-        {
-          "id": "cpuUsage",
-          "enabled": true
-        },
-        {
-          "id": "memUsage",
-          "enabled": true
-        },
-        {
-          "id": "notificationButton",
-          "enabled": true
-        },
-        {
-          "id": "battery",
           "enabled": true
         },
         {
@@ -624,6 +600,19 @@
         },
         {
           "id": "controlCenterButton",
+          "enabled": true,
+          "showBatteryIcon": true
+        },
+        {
+          "id": "clock",
+          "enabled": true
+        },
+        {
+          "id": "weather",
+          "enabled": true
+        },
+        {
+          "id": "notificationButton",
           "enabled": true
         },
         {
@@ -635,7 +624,7 @@
       "innerPadding": 4,
       "bottomGap": 0,
       "transparency": 0,
-      "widgetTransparency": 1,
+      "widgetTransparency": 0.06,
       "squareCorners": false,
       "noBackground": false,
       "maximizeWidgetIcons": false,
